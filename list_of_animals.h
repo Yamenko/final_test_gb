@@ -11,7 +11,6 @@ public:
 	int AddAnimalToList(eAnimal type, std::string& species);
 	int AddAnimalToList(eAnimal type, std::string& species, std::string& birthday);
 
-
 	size_t GetCountOfAnimals() const { return my_list_animal.size(); }
 private:
 	ConstructorAnimal* constructor_animal;

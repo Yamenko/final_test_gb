@@ -22,6 +22,7 @@ int ListOfAnimals::AddAnimalToList(eAnimal type, std::string& species)
 	return AddAnimalToList(animal);
 }
 
+
 int ListOfAnimals::AddAnimalToList(eAnimal type, std::string& species, std::string& birthday)
 {
 	const Animal* animal = constructor_animal->CreateNewAnimal(type, species, birthday);

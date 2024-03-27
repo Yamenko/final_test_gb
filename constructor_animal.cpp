@@ -10,6 +10,7 @@ Animal* ConstructorAnimal::CreateNewAnimal(eAnimal type)
 	}
 }
 
+
 Animal* ConstructorAnimal::CreateNewAnimal(eAnimal type, std::string& species)
 {
 	Animal* retAnimal = CreateNewAnimal(type);
