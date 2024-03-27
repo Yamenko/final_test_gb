@@ -13,26 +13,50 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Исходные файлы\animal">
+      <UniqueIdentifier>{db1f4fc1-c879-4a5a-8d27-48b9568f725b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\animal">
+      <UniqueIdentifier>{403a063d-66a0-4ea2-b8ff-0319856c7c9d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="animal.h">
+    <ClInclude Include="list_of_animals.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="action_interface.h">
+      <Filter>Файлы заголовков\animal</Filter>
+    </ClInclude>
+    <ClInclude Include="animal.h">
+      <Filter>Файлы заголовков\animal</Filter>
     </ClInclude>
     <ClInclude Include="pack_animal.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\animal</Filter>
     </ClInclude>
     <ClInclude Include="pet_animal.h">
+      <Filter>Файлы заголовков\animal</Filter>
+    </ClInclude>
+    <ClInclude Include="constructor_animal.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="animal.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="list_of_animals.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="animal.cpp">
+      <Filter>Исходные файлы\animal</Filter>
     </ClCompile>
     <ClCompile Include="pack_animal.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\animal</Filter>
     </ClCompile>
     <ClCompile Include="pet_animal.cpp">
+      <Filter>Исходные файлы\animal</Filter>
+    </ClCompile>
+    <ClCompile Include="constructor_animal.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

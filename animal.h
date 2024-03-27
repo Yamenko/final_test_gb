@@ -19,7 +19,46 @@
 //10. Счетчик животных
 //Создать механизм, который позволяет вывести на экран общее количество созданных животных любого типа (Как домашних, так и вьючных), то есть при создании каждого нового животного счетчик увеличивается на “1”.
 
-class Animal
-{
+
+// В составы классов которых в случае 
+// Pets войдут классы : собаки, кошки, хомяки, а в класс 
+// Pack animals войдут : Лошади, верблюды и ослы).
+// Каждый тип животных будет характеризоваться(например, имена, даты рождения, выполняемые команды и т.д)
+
+#include <string>
+#include <vector>
+#include "action_interface.h"
+
+class Animal : public ActionInterface {
+public:
+	Animal() = default;
+	~Animal() override = default;
+
+	std::string Voiсe() override	{ return word; }
+	void SetVoice(const std::string& s)	{ word = s; }
+
+	std::string Action(int i) override;
+	int SetNewAction(std::string& s);
+	size_t GetCountOfActions() const { return do_something.size(); }
+
+	void SetSpecies(const std::string& s) { species = s; }
+	std::string& GetSpecies() { return species; }
+
+	void SetBirthday(const std::string& s) { birthday = s; }
+	std::string& GetBirthday() { return birthday; }
+
+private:
+	std::string species;	// Вид животного
+	std::string birthday;
+
+//protected:
+	std::string word;
+	std::vector<std::string>do_something;
+
 };
 
+
+enum eAnimal{
+	PET,
+	PACK
+};
