@@ -1,4 +1,6 @@
 #include "constructor_animal.h"
+#include "pack_animal.h"
+#include "pet_animal.h"
 
 Animal* ConstructorAnimal::CreateNewAnimal(eAnimal type)
 {

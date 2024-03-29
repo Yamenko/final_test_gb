@@ -39,6 +39,9 @@
     <ClInclude Include="constructor_animal.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="console_view.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -57,6 +60,9 @@
       <Filter>Исходные файлы\animal</Filter>
     </ClCompile>
     <ClCompile Include="constructor_animal.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="console_view.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

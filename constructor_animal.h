@@ -1,6 +1,6 @@
 #pragma once
-#include "pack_animal.h"
-#include "pet_animal.h"
+#include "animal.h"
+
 
 class ConstructorAnimal
 {

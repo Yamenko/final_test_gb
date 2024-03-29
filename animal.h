@@ -25,6 +25,8 @@
 // Pack animals войдут : Ћошади, верблюды и ослы).
 //  аждый тип животных будет характеризоватьс€(например, имена, даты рождени€, выполн€емые команды и т.д)
 
+
+#include <iostream>
 #include <string>
 #include <vector>
 #include "action_interface.h"
