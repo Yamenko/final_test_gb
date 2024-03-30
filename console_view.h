@@ -1,5 +1,7 @@
 #pragma once
-#include "list_of_animals.h"	
+#include <map>
+#include "list_of_animals.h"
+#include "console_menu.h"
 
 class ConsoleView
 {
@@ -15,6 +17,6 @@ public:
 private:
 	ListOfAnimals* list = nullptr;
 
-	int MainMenu();
+	std::map<int, ConsoleMenu*> console_menu;
 };
 

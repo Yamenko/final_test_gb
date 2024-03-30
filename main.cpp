@@ -9,9 +9,8 @@ int main()
 	ListOfAnimals* ls = new  ListOfAnimals();
 	ConsoleView& cv = ConsoleView::getInstance();
 
-	cv.SetListPtr(ls);
-
-	cv.StartConsole();
+	cv.SetListPtr(ls); // добавление класса лист в консоль для работы
+	cv.StartConsole(); // начало работы
 
 	return 0;
 }

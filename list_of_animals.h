@@ -7,9 +7,9 @@ public:
 	~ListOfAnimals() = default;
 
 	int AddAnimalToList(const Animal* animal);
-	int AddAnimalToList(eAnimal type);
-	int AddAnimalToList(eAnimal type, std::string& species);
-	int AddAnimalToList(eAnimal type, std::string& species, std::string& birthday);
+//	int AddAnimalToList(eAnimal type);
+//	int AddAnimalToList(eAnimal type, std::string& species);
+	int AddAnimalToList(eAnimal type, std::string species = nullptr, std::string birthday = nullptr);
 
 	size_t GetCountOfAnimals() const { return my_list_animal.size(); }
 private:

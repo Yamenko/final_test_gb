@@ -10,21 +10,27 @@ int ListOfAnimals::AddAnimalToList(const Animal* animal)
 	return 1;
 }
 
-int ListOfAnimals::AddAnimalToList(eAnimal type)
-{
-	const Animal* animal = constructor_animal->CreateNewAnimal(type);
-	return AddAnimalToList(animal);
-}
-
-int ListOfAnimals::AddAnimalToList(eAnimal type, std::string& species)
-{
-	const Animal* animal = constructor_animal->CreateNewAnimal(type, species);
-	return AddAnimalToList(animal);
-}
-
-
-int ListOfAnimals::AddAnimalToList(eAnimal type, std::string& species, std::string& birthday)
+int ListOfAnimals::AddAnimalToList(eAnimal type, std::string species, std::string birthday)
 {
 	const Animal* animal = constructor_animal->CreateNewAnimal(type, species, birthday);
 	return AddAnimalToList(animal);
 }
+
+//int ListOfAnimals::AddAnimalToList(eAnimal type)
+//{
+//	const Animal* animal = constructor_animal->CreateNewAnimal(type);
+//	return AddAnimalToList(animal);
+//}
+//
+//int ListOfAnimals::AddAnimalToList(eAnimal type, std::string& species)
+//{
+//	const Animal* animal = constructor_animal->CreateNewAnimal(type, species);
+//	return AddAnimalToList(animal);
+//}
+//
+//
+//int ListOfAnimals::AddAnimalToList(eAnimal type, std::string& species, std::string& birthday)
+//{
+//	const Animal* animal = constructor_animal->CreateNewAnimal(type, species, birthday);
+//	return AddAnimalToList(animal);
+//}

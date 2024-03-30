@@ -1,4 +1,5 @@
 #include "console_view.h"
+#include <regex>
 
 ConsoleView& ConsoleView::getInstance()
 {
@@ -8,36 +9,22 @@ ConsoleView& ConsoleView::getInstance()
 
 void ConsoleView::StartConsole()
 {
-	std::string str = "";
 	while (true)
 	{
+		std::cout << "Начало работы: (0 - для выхода)\n";
 		switch (MainMenu())
 		{
-		case 1 : std::cout << "первый"; break;
-		case 2 : std::cout << "второй"; break;
+		case 1 : std::cout << "первый\n"; break; // функции вывода меню
+		case 2 : std::cout << "второй\n"; break;
 
-			default: std::cout << "чтото пошло не так))"; break;
+		case 0: std::cout << "До скорого!\n"; return;
+			default: std::cout << "чтото пошло не так))\n"; break;
 		}
-
-
-		//return;
 	}
-
 }
 
 void ConsoleView::SetListPtr(ListOfAnimals* list_){
 	if (list == nullptr) { list = list_; }
 }
 
-int ConsoleView::MainMenu()
-{
-	unsigned int i;
-	std::string s;
-	std::cout << "Начало работы:\nвыберите пункт: ";
-	std::cin >> i;
-	std::cin.unget();
-
-	if (i > 0)	{ return i; }
-	else		{ return -1; }
-}
 

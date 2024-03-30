@@ -130,6 +130,7 @@
   <ItemGroup>
     <ClInclude Include="action_interface.h" />
     <ClInclude Include="animal.h" />
+    <ClInclude Include="console_menu.h" />
     <ClInclude Include="console_view.h" />
     <ClInclude Include="constructor_animal.h" />
     <ClInclude Include="list_of_animals.h" />
@@ -138,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="animal.cpp" />
+    <ClCompile Include="console_menu.cpp" />
     <ClCompile Include="console_view.cpp" />
     <ClCompile Include="constructor_animal.cpp" />
     <ClCompile Include="list_of_animals.cpp" />

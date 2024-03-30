@@ -43,6 +43,7 @@ public:
 	int SetNewAction(std::string& s);
 	size_t GetCountOfActions() const { return do_something.size(); }
 
+
 	void SetSpecies(const std::string& s) { species = s; }
 	std::string& GetSpecies() { return species; }
 
@@ -53,9 +54,8 @@ private:
 	std::string species;	// Вид животного
 	std::string birthday;
 
-//protected:
 	std::string word;
-	std::vector<std::string>do_something;
+	std::vector<std::string> do_something;
 
 };
 
