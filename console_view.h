@@ -12,7 +12,9 @@ public:
 	static ConsoleView& getInstance();
 
 	void StartConsole();
-	void SetListPtr(ListOfAnimals* list_);
+	void SetListPtr(ListOfAnimals* list_); // нужен для работы функций
+
+	void InitConsoleMenu();
 
 private:
 	ListOfAnimals* list = nullptr;

@@ -15,5 +15,7 @@ public:
 private:
 	ConstructorAnimal* constructor_animal;
 	std::vector<Animal>my_list_animal;
+
+
 };
 

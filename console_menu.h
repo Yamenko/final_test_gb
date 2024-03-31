@@ -4,48 +4,30 @@
 class ConsoleMenu
 {
 public:
+	ConsoleMenu(std::string s) { menu_str = std::move(s); }
+	virtual ~ConsoleMenu() = default;
+
 	const std::string& GetTextMenu() { return menu_str; }
 	virtual int DoWork() = 0;
 
 private:
-	std::string menu_str = "Test";
+	std::string menu_str;
 };
 
 class MainMenu : public ConsoleMenu
 {
 public:
-	int DoWork() override;
+	MainMenu() : ConsoleMenu(std::string("Main Menu")) {}
+	~MainMenu() override = default;
 
-private :
-	std::string menu_str = "Main Menu";
+	int DoWork() override;
 };
 
 class AddAnimalMenu : public ConsoleMenu
 {
 public:
-	int DoWork() override;
+	AddAnimalMenu() : ConsoleMenu(std::string("Add Animal Menu")) {}
+	~AddAnimalMenu() override = default;
 
-private:
-	std::string menu_str = "Add Animal Menu";
+	int DoWork() override { return 0; }
 };
-
-//int ConsoleView::MainMenu()
-//{
-//	std::string s;
-//	std::cout << "¬ыберите пункт: ";
-//	std::cin >> s;
-//
-//	system("cls");
-//
-//	// проверка на число
-//	const std::regex base("[0-9]*");
-//	if (std::regex_match(s, base)) {
-//		return std::stoi(s);
-//	}
-//	else { return -1; } // не число!
-//}
-//
-//int ConsoleView::AddAnimalMenu()
-//{
-//	return 0;
-//}
