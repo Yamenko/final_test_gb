@@ -50,6 +50,7 @@ public:
 	void SetBirthday(const std::string& s) { birthday = s; }
 	std::string& GetBirthday() { return birthday; }
 
+	std::string GetInfo();
 private:
 	std::string species;	// Вид животного
 	std::string birthday;
@@ -57,10 +58,4 @@ private:
 	std::string word;
 	std::vector<std::string> do_something;
 
-};
-
-
-enum eAnimal{
-	PET,
-	PACK
 };

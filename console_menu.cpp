@@ -3,19 +3,38 @@
 
 #include "console_menu.h"
 
-int MainMenu::DoWork()
-{
-    std::string s;
-    std::cout << "Выберите пункт: ";
-    std::cin >> s;
 
+int AddAnimalMenu::DoWork(){
     system("cls");
+    int type;
+	std::string species;
+	std::string birthday;
 
-    // проверка на число
-    const std::regex base("[0-9]*");
-    if (std::regex_match(s, base)) {
-    	return std::stoi(s);
+    std::string s;
+    while (true) {
+
+        // ----- >>>> Выбор типа животного
+    	std::cout << "Какое животное будем добавлять\n(0 - домашнее, 1 - вьючное):\n";
+        std::cin >> s;
+
+        // проверка на число
+        const std::regex base("[0-1]");
+        if (std::regex_match(s, base)) {
+            type =  std::stoi(s);
+        }
+        else { 
+            std::cout << "Нужно ввести 0 или 1. Это не сложно!" << std::endl;
+            continue;
+        }
+
+        // ----- >>>> Порода
+        std::cout << "Какая порода:\n";
+        std::cin >> species;
+
+        // ----- >>>> День рождения
+        std::cout << "День рождения:\n";
+        std::cin >> birthday;
+
+        return 0;
     }
-    else { return -1; } // не число!
-    return 0;
 }

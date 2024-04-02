@@ -1,6 +1,8 @@
 #pragma once
 #include "constructor_animal.h"
 
+
+
 class ListOfAnimals{
 public:
 	ListOfAnimals();
@@ -12,10 +14,12 @@ public:
 	int AddAnimalToList(eAnimal type, std::string species = nullptr, std::string birthday = nullptr);
 
 	size_t GetCountOfAnimals() const { return my_list_animal.size(); }
+	Animal* GetAnimal(int id);
+	void PrintList();
 private:
 	ConstructorAnimal* constructor_animal;
 	std::vector<Animal>my_list_animal;
 
-
+	//void PrintInfoOneAnimal(int num_in_list);
 };
 

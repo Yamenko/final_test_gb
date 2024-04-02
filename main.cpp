@@ -5,12 +5,10 @@ int main()
 {
 	setlocale(LC_ALL, "ru-RU");
 
+	ConsoleView* cv = new ConsoleView(new ListOfAnimals());
 
-	ListOfAnimals* ls = new  ListOfAnimals();
-	ConsoleView& cv = ConsoleView::getInstance();
-
-	cv.SetListPtr(ls); // добавление класса лист в консоль для работы
-	cv.StartConsole(); // начало работы
+	// начало работы
+	cv->StartConsole(); 
 
 	return 0;
 }

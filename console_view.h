@@ -1,24 +1,23 @@
 #pragma once
-#include <map>
 #include "list_of_animals.h"
-#include "console_menu.h"
+
 
 class ConsoleView
 {
 public:
-	ConsoleView() = default;
+	ConsoleView(ListOfAnimals* list_) : list(list_){};
 	~ConsoleView() = default;
 
-	static ConsoleView& getInstance();
-
-	void StartConsole();
-	void SetListPtr(ListOfAnimals* list_); // нужен для работы функций
-
-	void InitConsoleMenu();
+	int StartConsole();
 
 private:
 	ListOfAnimals* list = nullptr;
 
-	std::map<int, ConsoleMenu*> console_menu;
+	int MainMenu();
+	int MainMenuText();
+	int AddNewAnimal();
+	int AddNewAction() { return 0; };
+
+	void PrintList();
 };
 

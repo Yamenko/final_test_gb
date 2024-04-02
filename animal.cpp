@@ -6,6 +6,7 @@ std::string Animal::Action(int i)
 	 else  { return "ERROR"; }
 }
 
+
 int Animal::SetNewAction(std::string& s)
 {
 	for (std::string& act : do_something){
@@ -14,4 +15,9 @@ int Animal::SetNewAction(std::string& s)
 
 	do_something.push_back(s);
 	return 1;
+}
+
+std::string Animal::GetInfo()
+{
+	return "Species: " + GetSpecies() + ", birthday: " + GetBirthday();
 }

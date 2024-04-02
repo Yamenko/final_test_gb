@@ -1,6 +1,10 @@
 #pragma once
 #include "animal.h"
 
+enum eAnimal {
+	PET,
+	PACK
+};
 
 class ConstructorAnimal
 {
