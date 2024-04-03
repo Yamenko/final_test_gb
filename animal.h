@@ -29,7 +29,10 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <chrono>
+
 #include "action_interface.h"
+
 
 class Animal : public ActionInterface {
 public:
@@ -39,18 +42,22 @@ public:
 	std::string Voiсe() override	{ return word; }
 	void SetVoice(const std::string& s)	{ word = s; }
 
-	std::string Action(int i) override;
-	int SetNewAction(std::string& s);
+	std::string GetAction(int i) override;
+	int SetAction(std::string& s);
 	size_t GetCountOfActions() const { return do_something.size(); }
 
 
 	void SetSpecies(const std::string& s) { species = s; }
 	std::string& GetSpecies() { return species; }
 
-	void SetBirthday(const std::string& s) { birthday = s; }
+	void SetBirthday(const std::string& s);
 	std::string& GetBirthday() { return birthday; }
 
 	std::string GetInfo();
+
+	unsigned int StringToIntData(const std::string& s);
+	unsigned int i_birthday = 0;
+
 private:
 	std::string species;	// Вид животного
 	std::string birthday;

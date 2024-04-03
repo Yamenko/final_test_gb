@@ -1,4 +1,5 @@
 #pragma once
+#include <algorithm>
 #include "constructor_animal.h"
 
 
@@ -15,11 +16,10 @@ public:
 
 	size_t GetCountOfAnimals() const { return my_list_animal.size(); }
 	Animal* GetAnimal(int id);
-	void PrintList();
+	void OutputList();
+	int SortByData();
 private:
 	ConstructorAnimal* constructor_animal;
 	std::vector<Animal>my_list_animal;
-
-	//void PrintInfoOneAnimal(int num_in_list);
 };
 

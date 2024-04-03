@@ -27,10 +27,21 @@ Animal* ListOfAnimals::GetAnimal(int id)
 	}
 }
 
-void ListOfAnimals::PrintList()
+void ListOfAnimals::OutputList()
 {
 	for (int i = 0 ; i < my_list_animal.size(); ++i)
 	{
 		std::cout << i << " " << my_list_animal[i].GetInfo() << std::endl;
 	}
+}
+
+bool operator< (const Animal& a1, const Animal& a2)
+{
+	return (a1.i_birthday < a2.i_birthday);
+}
+
+int ListOfAnimals::SortByData()
+{
+	std::sort(my_list_animal.begin(), my_list_animal.end());
+	return 0;
 }

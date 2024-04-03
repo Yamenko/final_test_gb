@@ -6,5 +6,5 @@ public:
 	virtual ~ActionInterface() = default;
 
 	virtual std::string Voiñe() = 0;
-	virtual std::string Action(const int i) = 0;
+	virtual std::string GetAction(const int i) = 0;
 };

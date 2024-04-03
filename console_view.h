@@ -16,7 +16,8 @@ private:
 	int MainMenu();
 	int MainMenuText();
 	int AddNewAnimal();
-	int AddNewAction() { return 0; };
+	int AddNewAction();
+	int GetActionsAnimal();
 
 	void PrintList();
 };

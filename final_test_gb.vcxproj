@@ -133,6 +133,7 @@
     <ClInclude Include="console_view.h" />
     <ClInclude Include="constructor_animal.h" />
     <ClInclude Include="list_of_animals.h" />
+    <ClInclude Include="my_data_class.h" />
     <ClInclude Include="pack_animal.h" />
     <ClInclude Include="pet_animal.h" />
   </ItemGroup>
@@ -142,6 +143,7 @@
     <ClCompile Include="constructor_animal.cpp" />
     <ClCompile Include="list_of_animals.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="my_data_class.cpp" />
     <ClCompile Include="pack_animal.cpp" />
     <ClCompile Include="pet_animal.cpp" />
   </ItemGroup>
