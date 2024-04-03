@@ -1,7 +1,15 @@
 #pragma once
 #include "list_of_animals.h"
 
+/**
 
+    @class   ConsoleView
+    @brief   Класс для работы с консолью. Отображение списка команд и взаимодействие с пользователем
+    @details ~
+    @author  Yamenko
+    @date    3.04.2024
+
+**/
 class ConsoleView
 {
 public:

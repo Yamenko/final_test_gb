@@ -1,12 +1,22 @@
 #include "animal.h"
 
+
+/**
+    @brief  Функция получения одного из действий животного, по номеру в списке
+    @param  i - Номер запрашиваемого действия
+    @retval строка - Действие в виде строки
+**/
 std::string Animal::GetAction(int i)
 {
 	 if (i < do_something.size()) {  return do_something[i]; }
 	 else  { return "NO any actions"; }
 }
 
-
+/**
+    @brief  Функция добавления нового действия
+    @param  s - Новое действие для добавления
+    @retval число - Коды ошибок 
+**/
 int Animal::SetAction(std::string& s)
 {
 	for (std::string& act : do_something){
@@ -28,11 +38,20 @@ void Animal::SetBirthday(const std::string& s)
 	return;
 }
 
+/**
+    @brief  Функция получения информации о животном в виде строки
+    @retval строка - Информация о животном
+**/
 std::string Animal::GetInfo()
 {
 	return "Species: " + GetSpecies() + ", birthday: " + GetBirthday();
 }
 
+/**
+    @brief  Функция преобразования строки даты рождения в число для возомжности создать сортировку
+    @param  s - строка даты
+    @retval число - получившееся число после преобразований
+**/
 unsigned int Animal::StringToIntData(const std::string& s)
 {
 	std::string tmp;

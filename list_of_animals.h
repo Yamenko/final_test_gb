@@ -3,7 +3,13 @@
 #include "constructor_animal.h"
 
 
+/**
 
+    @class   ListOfAnimals
+    @brief   Класс для работы со списком животных, содержит все необходимые функции
+    @details ~
+
+**/
 class ListOfAnimals{
 public:
 	ListOfAnimals();

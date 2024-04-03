@@ -1,5 +1,15 @@
 #pragma once
 #include "animal.h"
+
+/**
+
+    @class   PetAnimal
+    @brief   Класс домашнего животного
+    @details ~
+    @author  Yamenko
+    @date    3.04.2024
+
+**/
 class PetAnimal : public Animal
 {
 public:

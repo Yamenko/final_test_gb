@@ -1,23 +1,16 @@
 #include "console_view.h"
 #include <regex>
 
-//ConsoleView& ConsoleView::getInstance()
-//{
-//	static ConsoleView console_view;
-//	return console_view;
-//}
-
+/**
+    @brief  Основная функция работы с пользователем
+    @retval число - Коды ошибок
+**/
 int ConsoleView::StartConsole()
 {
 	if (!list) { return -1; }
-	//InitConsoleMenu();
-
+	
 	while (true)
 	{
-		//system("cls");
-
-		//int index = MainMenu();
-
 		switch (MainMenu())
 		{
 		case 1: AddNewAnimal(); break;
@@ -33,7 +26,10 @@ int ConsoleView::StartConsole()
 	return 0;
 }
 
-
+/**
+    @brief  Функция взаимодействия с пользователем, получения номера пункта
+    @retval число - Коды ошибок
+**/
 int ConsoleView::MainMenu()
 {
 	MainMenuText();
@@ -53,6 +49,10 @@ int ConsoleView::MainMenu()
 	return 0;
 }
 
+/**
+    @brief  Функция отображения пунктов меню
+    @retval число - Коды ошибок
+**/
 int ConsoleView::MainMenuText()
 {
 	std::cout << "Начало работы (0 - для выхода):" << std::endl;
@@ -67,6 +67,11 @@ int ConsoleView::MainMenuText()
 	return 0;
 }
 
+
+/**
+    @brief  Функция добавления нового живатного, использует функции других классов
+    @retval число - Коды ошибок
+**/
 int ConsoleView::AddNewAnimal()
 {
 	system("cls");
@@ -109,6 +114,10 @@ int ConsoleView::AddNewAnimal()
 	return 0;
 }
 
+/**
+    @brief  Функция добавления новых действий для животного
+    @retval число - Коды ошибок
+**/
 int ConsoleView::AddNewAction()
 {
 	system("cls");
@@ -147,6 +156,10 @@ int ConsoleView::AddNewAction()
 
 }
 
+/**
+    @brief  Функция отображения действий выбранного животного
+    @retval число - Коды ошибок
+**/
 int ConsoleView::GetActionsAnimal()
 {
 	system("cls");
@@ -182,5 +195,3 @@ int ConsoleView::GetActionsAnimal()
 	}
 	else { return -1; }
 }
-
-

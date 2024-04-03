@@ -1,5 +1,15 @@
 #pragma once
 #include "animal.h"
+
+/**
+
+    @class   PackAnimal
+    @brief   Класс вьючного животного
+    @details ~
+    @author  Yamenko
+    @date    3.04.2024
+
+**/
 class PackAnimal : public Animal
 {
 public:

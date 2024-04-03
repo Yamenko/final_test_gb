@@ -25,15 +25,21 @@
 // Pack animals войдут : Лошади, верблюды и ослы).
 // Каждый тип животных будет характеризоваться(например, имена, даты рождения, выполняемые команды и т.д)
 
-
-#include <iostream>
 #include <string>
 #include <vector>
-#include <chrono>
 
 #include "action_interface.h"
 
 
+/**
+
+    @class   Animal
+    @brief   Основной класс животного
+    @details ~Включает большую часть основных функций
+    @author  Yamenko
+    @date    3.04.2024
+
+**/
 class Animal : public ActionInterface {
 public:
 	Animal() = default;
